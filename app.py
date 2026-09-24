@@ -72,4 +72,4 @@ if st.button("Generate Resume", type="primary"):
                 response = model.generate_content(user_input)
                 st.markdown(response.text)
         except Exception as e:
-            st.error(f"Error: {e}. Ensure API key is configured in Secrets."))
+            st.error(f"Error: {e}. Ensure API key is configured in Secrets.")
