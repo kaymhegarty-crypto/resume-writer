@@ -65,7 +65,7 @@ if st.button("Generate Resume", type="primary"):
             api_key = st.secrets["GEMINI_API_KEY"]
             genai.configure(api_key=api_key)
             model = genai.GenerativeModel(
-                model_name="gemini-2.5-flash",
+                model_name="gemini-3.6-flash",
                 system_instruction=system_instruction,
             )
             with st.spinner("Writing resume draft..."):
