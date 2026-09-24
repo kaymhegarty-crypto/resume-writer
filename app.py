@@ -65,11 +65,11 @@ if st.button("Generate Resume", type="primary"):
             api_key = st.secrets["GEMINI_API_KEY"]
             genai.configure(api_key=api_key)
             model = genai.GenerativeModel(
-                model_name="gemini-1.5-flash",
+                model_name="gemini-2.5-flash",
                 system_instruction=system_instruction,
             )
             with st.spinner("Writing resume draft..."):
                 response = model.generate_content(user_input)
                 st.markdown(response.text)
         except Exception as e:
-            st.error(f"Error: {e}. Ensure API key is configured in Secrets.")
+            st.error(f"Error: {e}. Ensure API key is configured in Secrets."))
